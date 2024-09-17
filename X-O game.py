@@ -16,8 +16,8 @@ WHITE = (255, 255, 255)
 BLACK = (0, 0, 0)
 RED = (255, 0, 0)    # Color for X
 BLUE = (0, 0, 255)   # Color for O
-GREEN = (0, 255, 0)  # Color for win messages
-LIGHT_GREY = (211, 211, 211) # Light grey for cell background
+PURPLE = (128, 0, 128)  
+LIGHT_GREY = (211, 211, 211) 
 
 # Set up fonts
 font = None
@@ -48,8 +48,8 @@ def draw_board(screen, board, message=None):
             screen.blit(text, (col * 100 + 30, row * 100 + 30))
 
     if message:
-        # Render the message in green in the center of the screen
-        message_text = font.render(message, True, GREEN)
+       
+        message_text = font.render(message, True, PURPLE  )
         screen.blit(message_text, (WIDTH // 2 - message_text.get_width() // 2, HEIGHT // 2 - message_text.get_height() // 2))
 
 # Player makes their move
